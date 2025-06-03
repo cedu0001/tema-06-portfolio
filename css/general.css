@@ -20,6 +20,16 @@
 	src: url(/font/Nobile-Medium.ttf);
 }
 
+body {
+	background-color: var(--background-color);
+}
+
+main,
+header {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
 h1,
 h2,
 h3,
@@ -49,22 +59,69 @@ img {
 	max-width: 100%;
 }
 
+/* nav/header */
+
 a {
-	color: white;
+	color: var(--background-color);
 }
 
 a:hover {
 	text-decoration: underline;
 }
 
-body {
-	background-color: var(--background-color);
+nav {
+	padding: 1rem;
+	display: flex;
 }
+
+.logo {
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.off-screen-menu {
+	display: none;
+}
+
+.desktop-globalnav {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	padding: 0;
+	width: 100%;
+}
+.desktop-globalnav a {
+	color: black;
+}
+
+.ul-desk {
+	display: flex;
+	justify-content: space-around;
+
+	width: 50%;
+	margin: auto;
+}
+/* lottie */
+.lottie-animation {
+	margin: 10px;
+	max-width: 85%;
+}
+
+/* grids */
 
 .grid-1x1 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	background-color: var(--light-g-box);
+}
+
+.grid-1x8 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.grid-1x1 {
+	grid-column: span 3;
 }
 
 /* cta'er */
@@ -158,6 +215,10 @@ footer a {
 }
 
 @media (max-width: 600px) {
+	.li-desk {
+		display: none;
+	}
+
 	h1 {
 		font-size: 48px;
 	}
@@ -194,10 +255,6 @@ footer a {
 	}
 
 	/* nav */
-	nav {
-		padding: 1rem;
-		display: flex;
-	}
 
 	/* ham menu */
 	.ham-menu {
