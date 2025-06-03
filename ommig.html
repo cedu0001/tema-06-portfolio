@@ -3,7 +3,88 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="noindex" />
+		<link rel="stylesheet" href="/css/general.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<script src="/js/burgermenu.js" defer></script>
 		<title>Om mig</title>
 	</head>
-	<body></body>
+	<body>
+		<header>
+			<!-- Mobil header -->
+			<div class="off-screen-menu">
+				<ul>
+					<li><a href="index.html">forside</a></li>
+					<li><a href="portfolio.html">portfolio</a></li>
+					<li><a href="ommig.html">om mig</a></li>
+				</ul>
+			</div>
+
+			<nav>
+				<a href="index.html"><img class="logo" src="img/logo-ny.webp" /></a>
+				<div class="ham-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+			<!-- Mobil header slut -->
+		</header>
+		<main>
+			<div class="kontakt">
+				<h1>OM MIG</h1>
+				<h2>og mine erfaringer</h2>
+			</div>
+			<section class="grid-1x8">
+				<div class="green-infoboks">
+					<p>Halli halløj!</p>
+					<p>
+						Mit navn er Celia og jeg studerer Multimediedesign på Københavns Erhvervsakademi siden januar 2025,
+						hvor jeg lige pt. er på første semester af uddannelsen.
+					</p>
+					<p>
+						Noget af det vigtigste, jeg har taget med mig fra 1. semester, er forståelsen for hele processen –
+						fra idé til færdigt produkt eller løsning. Gennem arbejdet med forskellige teorier og metoder inden
+						for design og indholdsproduktion har jeg fået et solidt fundament. Samtidig har jeg lært at bruge
+						HTML, CSS og JavaScript, hvilket vi fik lov at bringe i spil i tema 5, hvor vi i grupper skulle
+						researche, designe og kode et forslag til en redesignet virksomheds­hjemmeside.
+					</p>
+					<p>
+						Inden jeg begyndte på KEA, havde jeg et sabbatår, hvor jeg arbejdede forskellige steder og fik
+						erfaring med lidt af hvert. Før det gik jeg på H.C. Ørsted Gymnasiet i Lyngby, hvor jeg havde
+						Kommunikation/IT på A-niveau og Programmering på B-niveau. Det var her, nysgerrigheden for det
+						digitale tog fart ₊✧
+					</p>
+				</div>
+				<img
+					id="om-mig-portrait"
+					src="/img/ommig.webp"
+					alt="et billede af Celia, på højre lår kan man se hendes lilla kattehjernecelle spise en småkage"
+				/>
+				<section class="kontakt">
+					<h2>Kontakt ✧ ₊</h2>
+					<p>Interesseret i at tage kontakt?</p>
+					<p>Udfyld venligst formularen nedenunder og så vender jeg tilbage hurtigst muligt.</p>
+					<form>
+						<label for="full-name">Fulde navn</label>
+						<input id="full-name" type="text" name="fname" />
+						<label for="email">E-mail</label>
+						<input id="email" type="email" type="email" />
+						<label for="yourmessage">Din besked</label>
+						<textarea name="yourmessage" id="yourmessage"></textarea>
+						<button class="cta-dark">indsend</button>
+					</form>
+				</section>
+				<img
+					id="kontor-kat"
+					src="/img/kontorkat.png"
+					alt="en illustration af den lilla kat som arbejder på en computer"
+				/>
+			</section>
+		</main>
+		<footer>
+			<p>Celia Nielsen</p>
+			<p><a href="mailto:cedu0001@stud.kea.dk"> cedu0001@stud.kea.dk</a></p>
+		</footer>
+	</body>
 </html>

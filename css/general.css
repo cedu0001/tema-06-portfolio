@@ -15,6 +15,11 @@
 	src: url(/font/Nobile-Regular.ttf);
 }
 
+@font-face {
+	font-family: nobile-medium;
+	src: url(/font/Nobile-Medium.ttf);
+}
+
 h1,
 h2,
 h3,
@@ -108,11 +113,44 @@ body {
 	color: var(--text-color);
 }
 
+/* om mig */
+
+/* forms */
+
+form {
+	background-color: var(--cta-dark-p);
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid var(--text-color);
+	margin-bottom: 40px;
+}
+
+input,
+label,
+button,
+textarea {
+	margin: 10px;
+	display: block;
+	font-family: nobile-regular;
+	font-size: 16px;
+}
+
+input,
+textarea {
+	background-color: var(--cta-light-p);
+	border: 1px solid var(--text-color);
+}
+textarea {
+	width: 300px;
+	height: 60px;
+	resize: vertical;
+}
+
 /* footer */
 footer {
 	display: flex;
 	background-color: var(--text-color);
-	padding: 50px;
+	padding: 30px;
 	flex-direction: column;
 	align-items: center;
 }
@@ -124,6 +162,10 @@ footer a {
 @media (max-width: 600px) {
 	h1 {
 		font-size: 48px;
+	}
+	h2 {
+		font-size: 40px;
+		font-style: italic;
 	}
 
 	.logo {
@@ -199,6 +241,8 @@ footer a {
 		transform: translate(-50%, -50%) rotate(-45deg);
 	}
 
+	/* forside (lidt blandet) - mobil */
+
 	.lottie-animation {
 		margin: 10px;
 	}
@@ -208,7 +252,7 @@ footer a {
 		grid-template-columns: 1fr;
 	}
 
-	.forside-projekt {
+	.green-infoboks {
 		background-color: var(--light-g-box);
 		border: 1px var(--text-color) solid;
 		margin: 20px;
@@ -216,14 +260,15 @@ footer a {
 		max-height: auto;
 	}
 
-	.forside-projekt a {
+	.green-infoboks a {
 		margin-top: 25px;
 		display: inline-block; /* gør, at linket opfører sig mere som en “boks” og accepterer top/bottom margins korrekt. */
 	}
 
-	.forside-kat-img {
-		margin-left: 150px;
-		max-width: 68%;
+	#forside-kat-img {
+		margin-top: 100px;
+		margin-left: 170px;
+		max-width: 60%;
 		order: -1;
 	}
 
@@ -237,5 +282,32 @@ footer a {
 	.forside-ommig {
 		margin: 20px;
 		padding: 15px;
+	}
+
+	.forside-kontakt {
+		margin-bottom: 70px;
+	}
+
+	/* om mig - mobil */
+
+	.kontakt h1,
+	.kontakt h2,
+	.kontakt p {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	#om-mig-portrait {
+		order: -2;
+	}
+
+	.kontakt {
+		order: 2;
+		margin-bottom: 30px;
+	}
+
+	#kontor-kat {
+		order: 1;
+		margin-bottom: 20px;
 	}
 }
