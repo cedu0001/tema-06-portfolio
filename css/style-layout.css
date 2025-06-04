@@ -145,6 +145,12 @@
 		margin-bottom: 70px;
 	}
 
+	/* portfolio - mobil */
+	h3 {
+		font-size: 20px;
+		font-family: nobile-medium;
+	}
+
 	/* om mig - mobil */
 
 	.green-infoboks-ommig {
@@ -207,6 +213,10 @@
 
 	.grid-1x1 {
 		margin-bottom: 100px;
+	}
+	/* portfolio */
+	#mobil-project-section {
+		display: none;
 	}
 
 	/* om mig */

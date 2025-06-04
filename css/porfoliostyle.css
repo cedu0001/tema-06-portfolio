@@ -1,0 +1,45 @@
+.mobil_card {
+	background-color: var(--light-g-box);
+	display: grid;
+	/* 	grid-template-rows: repeat(min-content); */
+	gap: 0.5rem;
+	border: 1.5px solid var(--text-color);
+	height: minmax(300px, min-content);
+	padding: 25px;
+	margin-top: 30px;
+	margin-bottom: 55px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+dialog {
+	position: fixed;
+	margin-top: 30px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid black;
+	padding: 20px;
+	width: 325px;
+	background-color: var(--light-g-box);
+	z-index: 20;
+}
+
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.4); /* Gennemsigtig mørk baggrund */
+}
+
+@keyframes dialogFadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.dialog-animation {
+	animation: dialogFadeIn 0.4s ease-out;
+}
