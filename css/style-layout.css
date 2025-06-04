@@ -187,10 +187,6 @@
 		max-height: auto;
 	}
 
-	.green-infoboks p {
-		font-size: 24px;
-	}
-
 	.green-infoboks a {
 		margin-top: 25px;
 		display: inline-block; /* gør, at linket opfører sig mere som en “boks” og accepterer top/bottom margins korrekt. */
