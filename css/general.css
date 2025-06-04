@@ -44,6 +44,10 @@ h1 {
 	font-size: 64px;
 }
 
+h2 {
+	font-style: italic;
+}
+
 h2,
 p,
 a {
@@ -205,13 +209,11 @@ nav {
 .green-infoboks-ommig {
 	background-color: var(--light-g-box);
 	border: 1px var(--text-color) solid;
-	margin-right: 90px;
+	margin-right: 50px;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	margin-left: 40px;
-	padding-right: 40px;
-	padding-left: 40px;
-	padding-top: 40px;
+	padding: 20px;
 	max-height: auto;
 }
 
