@@ -56,7 +56,9 @@ p {
 }
 
 img {
-	max-width: 100%;
+	max-width: 90%;
+	height: auto;
+	display: block;
 }
 
 /* nav/header */
@@ -70,41 +72,56 @@ a:hover {
 }
 
 nav {
-	padding: 1rem;
+	height: 80px; /* fast højde på navbar */
 	display: flex;
+	align-items: center; /* centrér alt vertikalt */
+	padding: 0 1rem;
 }
 
 .logo {
-	max-width: 100px;
-	max-height: 100px;
+	margin-top: 10px;
+	height: 100px;
+	object-fit: contain;
 }
 
 .off-screen-menu {
 	display: none;
 }
 
-.desktop-globalnav {
-	display: flex;
-	flex-direction: row;
-	list-style-type: none;
-	padding: 0;
-	width: 100%;
-}
-.desktop-globalnav a {
+.ul-desk a {
 	color: black;
 }
 
 .ul-desk {
 	display: flex;
-	justify-content: space-around;
-
-	width: 50%;
-	margin: auto;
+	flex-direction: row;
+	width: 100%;
+	justify-content: flex-end;
 }
+
+.li-desk {
+	margin: 0 30px;
+	font-size: 2vw;
+	display: flex;
+	align-items: center;
+}
+
+.li-desk a:hover {
+	background-color: var(--light-g-box);
+}
+
 /* lottie */
+
+.hero-section {
+	display: flex;
+	justify-content: center;
+}
+
 .lottie-animation {
-	margin: 10px;
-	max-width: 85%;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 150px;
+	max-width: 65%;
 }
 
 /* grids */
@@ -113,6 +130,13 @@ nav {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	background-color: var(--light-g-box);
+	border: 1px var(--text-color) solid;
+	margin: 30px;
+	margin-left: 40px;
+	margin-right: 40px;
+	padding: 40px;
+	max-height: auto;
+	gap: 50px;
 }
 
 .grid-1x8 {
@@ -152,7 +176,7 @@ nav {
 	font-style: italic;
 	color: var(--text-color);
 	text-decoration: underline;
-	background-color: var(--light-g-box);
+	background-color: var(--cta-light-p);
 }
 
 .pink-cta {
@@ -170,11 +194,43 @@ nav {
 	color: var(--text-color);
 }
 
+/* Om mig */
+.kontakt h1,
+.kontakt h2,
+.kontakt p {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.green-infoboks-ommig {
+	background-color: var(--light-g-box);
+	border: 1px var(--text-color) solid;
+	margin-right: 90px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 40px;
+	padding-right: 40px;
+	padding-left: 40px;
+	padding-top: 40px;
+	max-height: auto;
+}
+
+.green-infoboks-ommig p {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#kontor-kat {
+	margin-top: 80px;
+	margin-right: 40px;
+	margin-bottom: 80px;
+}
+
 /* forms */
 
 form {
 	background-color: var(--cta-dark-p);
-	margin: 20px;
+	margin: 40px;
 	padding: 10px;
 	border: 1px solid var(--text-color);
 	margin-bottom: 40px;
@@ -212,157 +268,4 @@ footer {
 footer p,
 footer a {
 	color: var(--cta-light-p);
-}
-
-@media (max-width: 600px) {
-	.li-desk {
-		display: none;
-	}
-
-	h1 {
-		font-size: 48px;
-	}
-	h2 {
-		font-size: 40px;
-		font-style: italic;
-	}
-
-	.logo {
-		max-width: 70px;
-		max-height: 70px;
-	}
-
-	/* off-screen-menu */
-	.off-screen-menu {
-		z-index: 9;
-		background-color: var(--text-color);
-		height: 100vh;
-		width: 100%;
-		max-width: 450px;
-		position: fixed;
-		top: 0;
-		right: -450px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		font-size: 3rem;
-		transition: 0.3s ease;
-	}
-	.off-screen-menu.active {
-		right: 0;
-	}
-
-	/* nav */
-
-	/* ham menu */
-	.ham-menu {
-		z-index: 10;
-		height: 50px;
-		width: 40px;
-		margin-left: auto;
-		position: relative;
-	}
-	.ham-menu span {
-		height: 5px;
-		width: 100%;
-		background-color: var(--text-color);
-		border-radius: 25px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		transition: 0.3s ease;
-	}
-	.ham-menu span:nth-child(1) {
-		top: 25%;
-	}
-	.ham-menu span:nth-child(3) {
-		top: 75%;
-	}
-	.ham-menu.active span {
-		background-color: white;
-	}
-	.ham-menu.active span:nth-child(1) {
-		top: 50%;
-		transform: translate(-50%, -50%) rotate(45deg);
-	}
-	.ham-menu.active span:nth-child(2) {
-		opacity: 0;
-	}
-	.ham-menu.active span:nth-child(3) {
-		top: 50%;
-		transform: translate(-50%, -50%) rotate(-45deg);
-	}
-
-	/* forside (lidt blandet) - mobil */
-
-	.lottie-animation {
-		margin: 10px;
-	}
-
-	.grid-1x8 {
-		display: grid;
-		grid-template-columns: 1fr;
-	}
-
-	.green-infoboks {
-		background-color: var(--light-g-box);
-		border: 1px var(--text-color) solid;
-		margin: 20px;
-		padding: 15px;
-		max-height: auto;
-	}
-
-	.green-infoboks a {
-		margin-top: 25px;
-		display: inline-block; /* gør, at linket opfører sig mere som en “boks” og accepterer top/bottom margins korrekt. */
-	}
-
-	#forside-kat-img {
-		margin-top: 100px;
-		margin-left: 170px;
-		max-width: 60%;
-		order: -1;
-	}
-
-	.grid-1x1 {
-		display: grid;
-		grid-template-columns: 1fr;
-		background-color: transparent;
-	}
-
-	.forside-kontakt,
-	.forside-ommig {
-		margin: 20px;
-		padding: 15px;
-	}
-
-	.forside-kontakt {
-		margin-bottom: 70px;
-	}
-
-	/* om mig - mobil */
-
-	.kontakt h1,
-	.kontakt h2,
-	.kontakt p {
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-
-	#om-mig-portrait {
-		order: -2;
-	}
-
-	.kontakt {
-		order: 2;
-		margin-bottom: 30px;
-	}
-
-	#kontor-kat {
-		order: 1;
-		margin-bottom: 20px;
-	}
 }
