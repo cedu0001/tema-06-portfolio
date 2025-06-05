@@ -12,34 +12,88 @@
 	margin-right: 20px;
 }
 
+.mobil_card img {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 5px;
+}
+
+.cta-portfolio {
+	display: flex;
+	justify-content: center;
+	color: var(--background-color);
+	background-color: var(--text-color);
+	padding: 15px;
+	border-radius: 10px;
+	border: 1px solid var(--text-color);
+	text-decoration: none;
+}
+
+.cta-portfolio:hover {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	border: 1px solid var(--text-color);
+	text-decoration: none;
+}
+
 dialog {
 	position: fixed;
-	margin-top: 30px;
-	top: 50%;
+	top: 10%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%); /* Kun horisontal centrering */
 	border: 2px solid black;
 	padding: 20px;
 	width: 325px;
 	background-color: var(--light-g-box);
 	z-index: 20;
+	max-height: 80vh; /* Så den ikke vokser for højt */
+	overflow-y: auto; /* Muliggør scroll på y-aksen */
+	border-radius: 10px;
+}
+
+dialog h3 {
+	margin-bottom: 10px;
+}
+
+dialog h2 {
+	margin-top: 15px;
+	font-size: 36px;
+}
+dialog a {
+	color: var(--text-color);
+	font-style: italic;
+}
+
+form {
+	background-color: var(--cta-dark-p);
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 20px;
+	border: 1px solid var(--text-color);
+	display: flex;
+	justify-content: center;
+}
+
+form button {
+	background: transparent;
+	border: none;
+	font-family: nobile-regular;
+	font-size: 16px;
+	color: var(--text-color);
+}
+
+dialog img {
+	margin-bottom: 20px;
 }
 
 dialog::backdrop {
 	background-color: rgba(0, 0, 0, 0.4); /* Gennemsigtig mørk baggrund */
 }
 
-@keyframes dialogFadeIn {
-	from {
-		opacity: 0;
-		transform: scale(0.95);
-	}
-	to {
-		opacity: 1;
-		transform: scale(1);
-	}
-}
+/* ---------desktop---------- */
 
-.dialog-animation {
-	animation: dialogFadeIn 0.4s ease-out;
+.project-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }

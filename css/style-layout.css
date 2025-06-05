@@ -151,6 +151,10 @@
 		font-family: nobile-medium;
 	}
 
+	#desktop-project-section {
+		display: none;
+	}
+
 	/* om mig - mobil */
 
 	.green-infoboks-ommig {
