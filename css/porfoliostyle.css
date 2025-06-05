@@ -13,6 +13,7 @@
 }
 
 .mobil_card img {
+	border: 1px solid var(--text-color);
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-bottom: 5px;
@@ -84,7 +85,8 @@ form button {
 }
 
 dialog img {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
+	max-height: 350px;
 }
 
 dialog::backdrop {
@@ -93,7 +95,72 @@ dialog::backdrop {
 
 /* ---------desktop---------- */
 
+.hidden {
+	display: none;
+}
+
 .project-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	margin-bottom: 100px;
+}
+
+#section-t2,
+#section-t3,
+#section-t4,
+#section-t5 {
+	margin-bottom: 75px;
+}
+
+.grid_3-2 {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	align-items: start; /* Sørger for at teksten og billedet står på samme top-linje */
+	grid-template-rows: 1fr;
+	max-width: 100%;
+	height: fit-content;
+}
+
+.grid_3-2 img {
+	width: 100%; /* Sikrer det ikke bliver for stort */
+	height: auto;
+	display: block;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.grid_3-2 div a {
+	margin-top: 50px;
+}
+
+.grid_2-1-1 {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	align-items: start;
+	grid-template-rows: 1fr 1fr;
+	max-width: 100%;
+	height: fit-content;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.grid_2-1-1 div {
+	background-color: var(--light-g-box);
+	border: 1px var(--text-color) solid;
+	padding: 20px;
+	margin-right: 20px;
+}
+
+.grid_2-1-1 #tema-2-img4 {
+	grid-column: span 2;
+}
+
+.grid_1-1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1 h2,
+.grid_1-1 p {
+	grid-column: 1;
 }

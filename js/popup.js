@@ -9,12 +9,6 @@ function setupArticle(article){
         dialog.querySelector("h3").scrollIntoView();
         dialog.showModal();
 
-
-     /*  dialog.classList.remove("dialog-animation");
-        void dialog.offsetWidth;
-        dialog.classList.add("dialog-animation"); */
-
-
     }
 
     closeBtn.addEventListener("click", function(){
@@ -61,8 +55,33 @@ dialog.addEventListener("click", function (e) {
 });
 
 
+///////////////
 
 
+const buttons = document.querySelectorAll(".project-button"); //Henter alle HTML-elementer med klassen .project-button og gemmer dem i buttons.
+const sections = document.querySelectorAll(".tema-section"); //Henter alle sektioner med klassen .tema-section, som er dem du vil vise/skjule, og gemmer dem i sections.
 
+buttons.forEach((button) => { //Går igennem hver eneste knap i buttons
+  button.addEventListener("click", (e) => { //Lytter efter et klik på knappen, og når det sker, kører koden indeni.
+    e.preventDefault(); // Forhindrer siden i at reloade
 
+    const targetId = button.getAttribute("data-target"); //Henter værdien af data-target fra knappen – fx "section-t2" – og gemmer det som targetId.
 
+    // Skjuler alle sektioner ved at tilføje klassen hidden (som har display: none i CSS).
+    sections.forEach(section => section.classList.add("hidden"));
+
+    // Finder den sektion med det ID, du fik fra data-target, og fjerner hidden-klassen → så den bliver synlig.
+    document.getElementById(targetId).classList.remove("hidden");
+  });
+});
+
+/* 
+Når man klikker på en knap:
+
+    Man finder ud af, hvilken sektion der skal vises (via data-target)
+
+    Alle sektioner skjules
+
+    Man viser kun den ene, man klikkede frem
+
+*/
