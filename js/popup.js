@@ -1,61 +1,70 @@
-function setupArticle(article){
+///////Mobil porfolio JS///////
+
+// Funktion der sætter funktionalitet op for ét article-element
+function setupArticle(article) {
+    // Finder knappen inden i article-elementet
     const openBtn = article.querySelector("article > button");
+
+    // Finder dialog-elementet inden i article
     const dialog = article.querySelector("dialog");
+
+    // Finder luk-knappen inde i dialogen (har klassen .close-dialog)
     const closeBtn = article.querySelector(".close-dialog");
 
+    // Lytter efter klik på åbn-knappen
     openBtn.addEventListener("click", openDialog);
-    function openDialog(event) {
-        event.preventDefault(); // forhindrer reload
-        dialog.querySelector("h3").scrollIntoView();
-        dialog.showModal();
 
+    // Funktion der åbner dialogen
+    function openDialog(event) {
+        event.preventDefault(); // Forhindrer at siden genindlæses (standardadfærd for nogle knapper/links)
+
+        // Scroller dialogens overskrift (h3) ind i view
+        dialog.querySelector("h3").scrollIntoView();
+
+        // Åbner dialogen som modal (med mørk baggrund/backdrop)
+        dialog.showModal();
     }
 
-    closeBtn.addEventListener("click", function(){
-        
-    dialog.close();
-
+    // Lytter efter klik på luk-knappen og lukker dialogen
+    closeBtn.addEventListener("click", function () {
+        dialog.close();
     });
 }
 
+// Finder alle elementer med klassen "mobil_card"
 const articles = document.querySelectorAll(".mobil_card");
 
+// Går igennem hvert article-element og kører setupArticle på det
 articles.forEach(setupArticle);
 
-articles.forEach((article) => {
-    setupArticle(article);
-
-});
-
-articles.forEach(function(article){
-    setupArticle(article);
-});
- 
 
 
-const dialog = document.querySelector("dialog"); //Finder <dialog> elementet i HTML og gemmer det i en variabel.
+////Luk dialog boks hvis man klikker undenfor
 
-dialog.addEventListener("click", function (e) {
-	e.preventDefault(); // Forhindrer browserens standardhandling (som fx at genindlæse siden ved visse klik)
+const dialogs = document.querySelectorAll("dialog"); // Vælg alle dialog-elementer
 
-	// Finder dialogens størrelse og position på skærmen
-	const rect = dialog.getBoundingClientRect(); 
+dialogs.forEach((dialog) => {//Går igennem hver dialog én efter én.
+	dialog.addEventListener("click", function (e) {
+		e.preventDefault(); 
 
-	// Tjekker om der blev klikket *inden i* dialogens synlige boks
-	const clickedInDialog =
-		e.clientX >= rect.left &&
-		e.clientX <= rect.right &&
-		e.clientY >= rect.top &&
-		e.clientY <= rect.bottom;
+        // Finder dialogens størrelse og position på skærmen
+		const rect = dialog.getBoundingClientRect();
 
-	// Hvis man klikker *udenfor* dialogens boks (altså på backdrop), så lukker dialogen
-	if (!clickedInDialog) {
-		dialog.close();
-	}
+        // Tjekker om der blev klikket *inden i* dialogens synlige boks
+		const clickedInDialog =
+			e.clientX >= rect.left &&
+			e.clientX <= rect.right &&
+			e.clientY >= rect.top &&
+			e.clientY <= rect.bottom;
+
+		if (!clickedInDialog) {
+			dialog.close(); // Luk dialog hvis man klikker udenfor
+		}
+	});
 });
 
 
-///////////////
+///////Desktop porfolio JS///////
 
 const buttons  = document.querySelectorAll(".project-button"); //Henter alle HTML-elementer med klassen .project-button og gemmer dem i buttons.
 const sections = document.querySelectorAll(".tema-section"); //Henter alle sektioner med klassen .tema-section, som er dem du vil vise/skjule, og gemmer dem i sections.

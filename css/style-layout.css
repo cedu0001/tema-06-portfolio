@@ -8,7 +8,7 @@
 }
 
 /* -----------------------MOBIL------------------------- */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 	.li-desk {
 		display: none;
 	}
@@ -190,7 +190,7 @@
 
 /* ----------------------DESKTOP---------------------------- */
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 	/* forside */
 	main {
 		margin-left: 125px;
