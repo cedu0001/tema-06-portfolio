@@ -57,21 +57,22 @@ dialog.addEventListener("click", function (e) {
 
 ///////////////
 
-
-const buttons = document.querySelectorAll(".project-button"); //Henter alle HTML-elementer med klassen .project-button og gemmer dem i buttons.
+const buttons  = document.querySelectorAll(".project-button"); //Henter alle HTML-elementer med klassen .project-button og gemmer dem i buttons.
 const sections = document.querySelectorAll(".tema-section"); //Henter alle sektioner med klassen .tema-section, som er dem du vil vise/skjule, og gemmer dem i sections.
 
 buttons.forEach((button) => { //Går igennem hver eneste knap i buttons
   button.addEventListener("click", (e) => { //Lytter efter et klik på knappen, og når det sker, kører koden indeni.
-    e.preventDefault(); // Forhindrer siden i at reloade
-
-    const targetId = button.getAttribute("data-target"); //Henter værdien af data-target fra knappen – fx "section-t2" – og gemmer det som targetId.
+    e.preventDefault();                       // Forhindrer siden i at reloade
+    const targetId = button.getAttribute("data-target");   //Henter værdien af data-target fra knappen – fx "section-t2" – og gemmer det som targetId.
 
     // Skjuler alle sektioner ved at tilføje klassen hidden (som har display: none i CSS).
-    sections.forEach(section => section.classList.add("hidden"));
-
-    // Finder den sektion med det ID, du fik fra data-target, og fjerner hidden-klassen → så den bliver synlig.
+    sections.forEach(sec => sec.classList.add("hidden"));
+     // Finder den sektion med det ID, fra data-target, og fjerner hidden-klassen → så den bliver synlig.
     document.getElementById(targetId).classList.remove("hidden");
+
+    // 2) Opdater aktiv-knappen
+    buttons.forEach(btn => btn.classList.remove("active")); // Går alle knapper igennem og fjerner klassen active, så ingen er markeret
+    button.classList.add("active");                         // Lægger active på den knap, der netop blev klikket → farven skifter.
   });
 });
 

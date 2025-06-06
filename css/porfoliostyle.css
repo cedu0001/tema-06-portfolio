@@ -99,6 +99,10 @@ dialog::backdrop {
 	display: none;
 }
 
+.project-button.active {
+	background: var(--cta-light-p);
+}
+
 .project-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -129,8 +133,14 @@ dialog::backdrop {
 	grid-row: 1;
 }
 
-.grid_3-2 div a {
-	margin-top: 50px;
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.flex-col a {
+	margin-top: 20px;
 }
 
 .grid_2-1-1 {
@@ -141,7 +151,18 @@ dialog::backdrop {
 	max-width: 100%;
 	height: fit-content;
 	margin-top: 20px;
-	margin-bottom: 20px;
+	gap: 1em;
+}
+
+.img-fixer {
+	height: 260px;
+}
+
+.cta-portfoliofix {
+	margin-top: 20px;
+}
+.cta-portfoliofix a:first-child {
+	margin-right: 25px;
 }
 
 .grid_2-1-1 div {
@@ -151,11 +172,24 @@ dialog::backdrop {
 	margin-right: 20px;
 }
 
-.grid_2-1-1 #tema-2-img4 {
+.grid_2-1-1 #tema-2-img4,
+.grid_2-1-1 #tema-3-img4,
+.grid_2-1-1 #tema-4-img4,
+.grid_2-1-1 #tema-5-img4 {
 	grid-column: span 2;
 }
 
+#tema-3-img4 {
+	height: 240px;
+	width: 500px;
+}
+
+#tema-4-img4 {
+	height: 220px;
+}
+
 .grid_1-1 {
+	margin-top: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
