@@ -109,7 +109,7 @@
 		border: 1px var(--text-color) solid;
 		margin: 20px;
 		padding: 15px;
-		max-height: auto;
+		max-height: none;
 	}
 
 	.green-infoboks a {
@@ -131,7 +131,7 @@
 		border: none;
 		margin: 0px;
 		padding: 0px;
-		max-height: auto;
+		max-height: none;
 		gap: 0px;
 	}
 
@@ -207,7 +207,7 @@
 		margin: 30px;
 		margin-left: 40px;
 		padding: 40px;
-		max-height: auto;
+		max-height: none;
 	}
 
 	.green-infoboks a {
