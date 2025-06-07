@@ -7,6 +7,12 @@
 	--cta-dark-p: #faadbf;
 }
 
+/* baggrundsbillede */
+body {
+	background-image: url("/assets/bg4.webp");
+	background-size: cover;
+}
+
 /* -----------------------MOBIL------------------------- */
 @media (max-width: 800px) {
 	.li-desk {

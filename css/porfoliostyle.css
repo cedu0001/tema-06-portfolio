@@ -99,8 +99,15 @@ dialog::backdrop {
 	display: none;
 }
 
+/* .active er en manuelt tilføjet klasse, 
+man bruger i JavaScript til at vise, 
+hvilket element der er valgt/aktivt, og så kan det styles anderledes i CSS. */
 .project-button.active {
 	background: var(--cta-light-p);
+}
+
+.project-button:hover {
+	transform: translateY(-5px) scale(1.1);
 }
 
 .project-grid {
