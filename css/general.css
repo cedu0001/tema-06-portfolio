@@ -67,14 +67,6 @@ img {
 
 /* nav/header */
 
-a {
-	color: var(--background-color);
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
 nav {
 	height: 80px; /* fast højde på navbar */
 	display: flex;
@@ -108,10 +100,6 @@ nav {
 	font-size: 2vw;
 	display: flex;
 	align-items: center;
-}
-
-.li-desk a:hover {
-	background-color: var(--light-g-box);
 }
 
 /* lottie */

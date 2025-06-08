@@ -9,12 +9,19 @@
 
 /* baggrundsbillede */
 body {
-	background-image: url("/assets/bg4.webp");
+	background-image: url("../assets/bg4.webp");
 	background-size: cover;
 }
 
 /* -----------------------MOBIL------------------------- */
 @media (max-width: 800px) {
+	a {
+		color: #fff6d2;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
 	.li-desk {
 		display: none;
 	}
@@ -101,8 +108,10 @@ body {
 	/* forside (lidt blandet) - mobil */
 
 	.lottie-animation {
-		max-width: 99%;
-		max-height: 99%;
+		max-width: 100%;
+		margin-bottom: 175px;
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 
 	.grid-1x8 {
@@ -198,9 +207,23 @@ body {
 
 @media (min-width: 800px) {
 	/* forside */
+
 	main {
 		margin-left: 125px;
 		margin-right: 125px;
+	}
+
+	.nav-link {
+		display: inline-block;
+		padding: 1em;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		background-size: contain;
+		padding-bottom: 1.5em;
+	}
+
+	.style-li:hover {
+		background-image: url("../assets/hover2.webp");
 	}
 
 	#forside-kat-img {
