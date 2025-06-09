@@ -18,11 +18,13 @@ function setupArticle(article) {
     function openDialog(event) {
         event.preventDefault(); // Forhindrer at siden genindlæses (standardadfærd for nogle knapper/links)
 
+          // Åbner dialogen som modal (med mørk baggrund/backdrop)
+        dialog.showModal();
+        
         // Scroller dialogens overskrift (h3) ind i view
         dialog.querySelector("h3").scrollIntoView();
 
-        // Åbner dialogen som modal (med mørk baggrund/backdrop)
-        dialog.showModal();
+      
     }
 
     // Lytter efter klik på luk-knappen og lukker dialogen
