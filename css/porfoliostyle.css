@@ -95,6 +95,10 @@ dialog::backdrop {
 
 /* ---------desktop---------- */
 
+* {
+	box-sizing: border-box;
+}
+
 .hidden {
 	display: none;
 }
@@ -121,6 +125,8 @@ hvilket element der er valgt/aktivt, og så kan det styles anderledes i CSS. */
 #section-t4,
 #section-t5 {
 	margin-bottom: 75px;
+	max-width: 1200px;
+	margin-inline: auto;
 }
 
 .grid_3-2 {
@@ -135,7 +141,7 @@ hvilket element der er valgt/aktivt, og så kan det styles anderledes i CSS. */
 }
 
 .grid_3-2 img {
-	width: 100%; /* Sikrer det ikke bliver for stort */
+	width: 100%;
 	height: auto;
 	display: block;
 	grid-column: 1;
@@ -148,26 +154,20 @@ hvilket element der er valgt/aktivt, og så kan det styles anderledes i CSS. */
 	justify-content: space-between;
 }
 
+#tema-3-forside {
+	border: 1px var(--text-color) solid;
+}
+
 .flex-col a {
 	margin-top: 20px;
 }
 
 .grid_2-1-1 {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-	align-items: start;
-	grid-template-rows: 1fr 1fr;
-	max-width: 100%;
-	height: auto;
-	width: auto;
-	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
 	gap: 1em;
-}
-
-.img-fixer {
-	height: auto;
-	width: auto;
-	max-width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .cta-portfoliofix {
@@ -181,25 +181,6 @@ hvilket element der er valgt/aktivt, og så kan det styles anderledes i CSS. */
 	background-color: var(--light-g-box);
 	border: 1px var(--text-color) solid;
 	padding: 20px;
-	margin-right: 20px;
-}
-
-.grid_2-1-1 #tema-2-img4,
-.grid_2-1-1 #tema-3-img4,
-.grid_2-1-1 #tema-4-img4,
-.grid_2-1-1 #tema-5-img4 {
-	grid-column: span 2;
-}
-
-#tema-3-img4 {
-	height: 240px;
-	width: 500px;
-}
-
-#tema-4-img4 {
-	height: 220px;
-	max-width: 100%;
-	width: auto;
 }
 
 .grid_1-1 {

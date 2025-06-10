@@ -109,7 +109,8 @@ body {
 
 	.lottie-animation {
 		max-width: 100%;
-		margin-bottom: 175px;
+		margin-top: 70px;
+		margin-bottom: 50px;
 		margin-left: 0px;
 		margin-right: 0px;
 	}
@@ -227,7 +228,7 @@ body {
 	}
 
 	#forside-kat-img {
-		margin-top: 130px;
+		margin-bottom: 100px;
 	}
 
 	.green-infoboks {
